@@ -22,13 +22,18 @@ while True:
     bad_guesses = []
     good_guesses = []
     
-    while len(bad_guesse) < 7 and len(good_guesses) != len(list(secret_word)):
+    while len(bad_guesses) < 7 and len(good_guesses) != len(list(secret_word)):
         #draw spaces
+        #draw guessed letters, spaces, and strikes
         for letter in secret_word:
             if letter in good_guesses:
                 print(letter, end =' ')
             else:
-                print(' ', end =' ')
+                print('_', end =' ')
+        print(' ')
+        print('Strikes: {}/7'.format(len(bad_guesses)))
+        print(' ')
+        
     #take guess
-    #draw guessed letters and strikes
+    
     #print out win/lose
