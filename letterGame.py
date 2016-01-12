@@ -11,9 +11,24 @@ words = [
     'brats',
     'babies'
     ]
+
+while True:
+    start = input('Press enter/retrun to start, or enter Q to quit')
+    if start.lower() == 'q':
+        break
     
-#pick random word
-#draw spaces
-#take guess
-#draw guessed letters and strikes
-#print out win/lose
+    #pick random word
+    secret_word = random.choice(words)
+    bad_guesses = []
+    good_guesses = []
+    
+    while len(bad_guesse) < 7 and len(good_guesses) != len(list(secret_word)):
+        #draw spaces
+        for letter in secret_word:
+            if letter in good_guesses:
+                print(letter, end =' ')
+            else:
+                print(' ', end =' ')
+    #take guess
+    #draw guessed letters and strikes
+    #print out win/lose
